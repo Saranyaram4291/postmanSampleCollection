@@ -1,0 +1,107 @@
+{
+	"info": {
+		"_postman_id": "d901053d-7eb0-4abd-8cc4-a01044b0667c",
+		"name": "Prospecting",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Contact",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "f3ac8c11-a254-4adf-8fa4-4964fac01ac0",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "4a581097-4de9-4b0e-8fa6-7aa8d7f0dcad",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"input\": [\r\n              \r\n{\r\n      \"apiName\": \"City\",\r\n      \"apiValue\": [\r\n        \"cago\"\r\n      ],\r\n      \"type\": \"string\",\r\n      \"contains\": false\r\n    }\r\n    ],\r\n    \"top\": 100,\r\n    \"skip\": 0,\r\n    \"displayfields\": [\r\n        \"Id\",\r\n        \"Account_Team_PID\",\r\n        \"NaicsCategory\",\r\n        \"FirstName\",\r\n        \"LastName\",\r\n        \"Name\",\r\n        \"Phone\",\r\n        \"Email\",\r\n        \"Department\",\r\n        \"Title\",\r\n        \"ManagementLevel\",\r\n        \"Company\",\r\n        \"Street\",\r\n        \"City\",\r\n        \"State\",\r\n        \"Zip\",\r\n        \"Status\",\r\n        \"LastModifiedDate\",\r\n        \"BCIContactID\",\r\n        \"AccountId\",\r\n        \"Account_Name\",\r\n        \"Account_PID_Owner\",\r\n        \"Account_PID_Name\",\r\n        \"Account_Sub_Account_ID\",\r\n        \"AccountStatus\",\r\n        \"MobilePhone\",\r\n        \"Segment\",\r\n        \"WirelineMobilityIndicator\",\r\n        \"Strata\",\r\n        \"Revenue\",\r\n        \"DunsNo\",\r\n        \"SicCode\",\r\n        \"CurrentYTDTBR\",\r\n        \"PriorYearBaseTBR\",\r\n        \"GrowthYTDTBR\",\r\n        \"EmployeesNo\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://att-asf-devtest-prospecting.herokuapp.com/restservices/prospecting/v1/sales/contacts/advancedsearch",
+					"protocol": "https",
+					"host": [
+						"att-asf-devtest-prospecting",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"restservices",
+						"prospecting",
+						"v1",
+						"sales",
+						"contacts",
+						"advancedsearch"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Address",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "f3ac8c11-a254-4adf-8fa4-4964fac01ac0",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "4a581097-4de9-4b0e-8fa6-7aa8d7f0dcad",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"input\": [  \r\n  \r\n   \r\n      {\r\n     \"apiName\" : \"Account_Sub_Account_ID\",\r\n     \"apiValue\" : [ \"NOT NULL\"],\r\n     \"type\" : \"String\",\r\n     \"contains\" : false\r\n   },\r\n      {\r\n            \"apiName\": \"PriorYearBaseTBRMin\",\r\n            \"apiValue\": [\r\n                \"-9922\"\r\n            ],\r\n            \"type\": \"NumberMin\",\r\n            \"contains\": false\r\n        },\r\n\r\n\r\n    {\r\n     \"apiName\" : \"Address_Type\",\r\n     \"apiValue\" : [ \"LIST\"],\r\n     \"type\" : \"String\",\r\n     \"contains\" : false\r\n   }\r\n\r\n     \r\n    ],\r\n    \"top\": \"100\",\r\n    \"displayfields\": [\r\n        \"SicCode\",\r\n        \"Segment\",\r\n        \"Account_Name\",\r\n        \"Account_PID_Owner\",\r\n        \"Account_PID_Name\",\r\n        \"Address_Type\",\r\n        \"ExtId\",\r\n        \"LocationId\",\r\n        \"Account_Sub_Account_ID\",\r\n        \"Name\",\r\n        \"addressSiteDunsNum\",\r\n        \"Street\",\r\n        \"Strata\",\r\n        \"City\",\r\n        \"State\",\r\n        \"Zip\",\r\n        \"Country\",\r\n        \"Phone\",\r\n        \"FirstNetInd\",\r\n        \"FiberLit\",\r\n        \"FiberNear\",\r\n        \"FiberStatus\",\r\n        \"LastModifiedDate\",\r\n        \"AccountStatus\",\r\n        \"WirelineMobilityIndicator\",\r\n        \"AccountId\",\r\n        \"LocationName\",\r\n        \"Locations\",\r\n        \"Employees\",\r\n        \"addressSiteDunsNum\",\r\n        \"Revenue\",\r\n        \"CurrentYTDTBR\",\r\n        \"PriorYearBaseTBR\",\r\n        \"GrowthYTDTBR\",\r\n        \"Svid\",\r\n        \"Svid_Name\",\r\n        \"Account_Team_PID\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://att-asf-devtest-prospecting.herokuapp.com/restservices/prospecting/v1/sales/addresses/advancedsearch",
+					"protocol": "https",
+					"host": [
+						"att-asf-devtest-prospecting",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"restservices",
+						"prospecting",
+						"v1",
+						"sales",
+						"addresses",
+						"advancedsearch"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
